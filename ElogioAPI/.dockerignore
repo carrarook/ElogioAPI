@@ -1,4 +1,0 @@
-﻿# .dockerignore
-**/bin/
-**/obj/
-appsettings.json

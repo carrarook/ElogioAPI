@@ -4,7 +4,7 @@ steps:
   args: [
     'build',
     '-t',
-    'us-central1-docker.pkg.dev/$PROJECT_ID/elogio-api-repo/elogio-api:latest',
+    'us-central1-docker.pkg.dev/elogiosestefani/elogio-api-repo/elogio-api:latest',
     # O ponto '.' usa a raiz do repositório como o "contexto" do build.
     # Isso é crucial para que o Dockerfile encontre a pasta ElogioAPI/.
     '.'
@@ -12,7 +12,7 @@ steps:
 
 # Esta linha diz ao Cloud Build para salvar a imagem criada no Artifact Registry
 images:
-- 'us-central1-docker.pkg.dev/$PROJECT_ID/elogio-api-repo/elogio-api:latest'
+- 'us-central1-docker.pkg.dev/elogiosestefani/elogio-api-repo/elogio-api:latest'
 
 # Esta opção resolve o erro de permissão de logs
 options:

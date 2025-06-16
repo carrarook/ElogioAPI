@@ -1,17 +1,15 @@
 steps:
-# 
 - name: 'gcr.io/cloud-builders/docker'
   args: [
     'build',
     '-t',
     'us-central1-docker.pkg.dev/$PROJECT_ID/elogio-api-repo/elogio-api:latest',
-    '.'
+    # Aponta para a pasta correta que contém o Dockerfile e o código
+    'ElogioAPI/'
   ]
 
-# diz ao Cloud Build para salvar a imagem criada no Artifact Registry
 images:
 - 'us-central1-docker.pkg.dev/$PROJECT_ID/elogio-api-repo/elogio-api:latest'
-
 
 options:
   logging: CLOUD_LOGGING_ONLY
